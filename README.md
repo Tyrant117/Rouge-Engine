@@ -1,2 +1,2 @@
 # Rouge-Engine
-Simple rouglike engine for Unity
+Simple roguelike engine for Unity
