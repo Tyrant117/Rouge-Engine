@@ -33,7 +33,7 @@ public class DrawExample : MonoBehaviour
                 Color color = Color.Lerp(Color.yellow, Color.green, Random.Range(0f, 1f));
                 color = new Color(color.r, color.g, color.b, Random.Range(0f, 1f));
 
-                cell.SetContent(Random.Range(48, 57) , Color.clear, color, Color.clear);
+                cell.SetContent(Random.Range(48, 57) , Color.clear, color);
             }
 
             yield return null;

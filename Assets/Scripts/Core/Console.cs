@@ -218,6 +218,17 @@ namespace Rougelikeberry.Render
             Foreground.UpdateMesh();
             Animation.UpdateMesh();
         }
+
+        public void SetBackgroundColor(Color background)
+        {
+            for (int y = 0; y < displayHeight; y++)
+            {
+                for (int x = 0; x < displayWidth; x++)
+                {
+                    Cells[x, y].SetBackgroundColor(background);
+                }
+            }
+        }
         #endregion
 
         #region --- Cell Methods ---

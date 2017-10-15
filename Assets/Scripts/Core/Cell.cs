@@ -22,25 +22,26 @@ namespace Rougelikeberry.Render
 
         public void Clear()
         {
-            SetContent(0, Color.clear, Color.clear, Color.clear);
+            SetContent(0, Color.clear, Color.clear);
+            animationColor = Color.clear;
         }
 
         public void Clear(float fadeTime, Color fadeColor)
         {
-            SetContent(0, Color.clear, Color.clear, Color.clear, fadeTime, fadeColor);
+            SetContent(0, Color.clear, Color.clear, fadeTime, fadeColor);
+            animationColor = Color.clear;
         }
 
-        public void SetContent(int content, Color backgroundColor, Color color, Color animColor)
+        public void SetContent(int content, Color backgroundColor, Color color)
         {
-            SetContent(content, backgroundColor, color, animColor, 0f, color);
+            SetContent(content, backgroundColor, color, 0f, color);
         }
 
-        public void SetContent(int content, Color backgroundColor, Color color, Color animColor, float fadeMax, Color fadeColor)
+        public void SetContent(int content, Color backgroundColor, Color color, float fadeMax, Color fadeColor)
         {
             // set target content and color
             targetContent = content;
             this.backgroundColor = backgroundColor;
-            animationColor = animColor;
             targetColor = color;
 
             // fade
@@ -62,6 +63,17 @@ namespace Rougelikeberry.Render
             {
                 owner.DiryCell(this);
             }
+        }
+
+        public void SetBackgroundColor(Color background)
+        {
+            backgroundColor = background;
+            owner.DiryCell(this);
+        }
+
+        public void StartAnimation(int content, Color animColor)
+        {
+            animationColor = animColor;
         }
 
         public void Update()

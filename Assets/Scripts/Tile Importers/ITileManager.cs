@@ -15,8 +15,6 @@ namespace Rougelikeberry.Render
         float GetUITileHeight();
         float GetUITileWidth();
 
-        float GetGridHeightScale();
-
         Tile GetGridTile(int id);
         Tile GetUITile(int id);
     }

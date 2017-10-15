@@ -58,7 +58,7 @@ namespace Rougelikeberry.Render
 
             // calculate quad size
             float quadWidth = m_TileManager.GetGridTileWidth() / m_TileManager.GetGridTileHeight();
-            float quadHeight = (m_TileManager.GetGridTileHeight() / m_TileManager.GetGridTileWidth()) * m_TileManager.GetGridHeightScale();
+            float quadHeight = m_TileManager.GetGridTileHeight() / m_TileManager.GetGridTileWidth();
 
             // calculate ui width scaling
             float scaledWidth = m_TileManager.GetUITileWidth() / m_TileManager.GetUITileHeight();

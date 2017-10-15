@@ -12,7 +12,6 @@ namespace Rougelikeberry.Render
         public Material GridMaterial;
         public int GridTileWidth;
         public int GridTileHeight;
-        public float QuadHeightScale;
         public float GridBleed;
 
         [Header ("Interface")]
@@ -78,11 +77,6 @@ namespace Rougelikeberry.Render
         public float GetGridTileWidth()
         {
             return GridTileWidth;
-        }
-
-        public float GetGridHeightScale()
-        {
-            return QuadHeightScale;
         }
 
         public Tile GetGridTile(int id)
